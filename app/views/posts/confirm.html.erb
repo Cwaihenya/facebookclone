@@ -5,7 +5,6 @@ h3> Do you want to post the following content?</h3>
   <p><strong>Content:</strong>
     <%= @post.content %>
   </p>
-  <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
   <%= image_tag(@post.image.url) if @post.image && @post.image.url %>
   <%= form.hidden_field :image_cache %>
   <%= form.submit "To post" %>

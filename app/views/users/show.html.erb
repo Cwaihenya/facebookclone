@@ -1,2 +1,14 @@
 <h1><%= @user.name %>page of</h1>
 <p>E-mail address: <%= @user.email %></p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @user.image.url %>
+</p>
+<tbody>
+  <tbody>
+    <% @users.each do |post| %>
+      <tr>
+    <td>   <%= link_to "New Post", new_post_path(@post) %></td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+</tbody>

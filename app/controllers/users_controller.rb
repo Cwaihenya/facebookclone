@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     end
     def show
       redirect_to user_path(@user.id)
+    
       end
     private
     def set_user
