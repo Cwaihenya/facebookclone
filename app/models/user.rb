@@ -7,4 +7,5 @@ before_validation { email.downcase! }
 
   validates :password, presence: true, length: { minimum: 6 }
 mount_uploader :image, ImageUploader
+has_many :posts
 end
