@@ -1,3 +1,65 @@
-// Place all the styles related to the users controller here.
+// Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h1
+{
+  font-size: 15pt;
+  color:black;
+  margin-top: 60px
+}
+header
+{
+  font-size: 30pt;
+width: 100%;
+background-color: #43609C;
+height: 50px;
+position: absolute;
+top: 0;
+text-indent: 3mm;
+text-decoration: none;
+box-shadow: none;
+border: 0;
+text-decoration: none;
+  }
+  .top_menu li a{
+color: #FFFFFF;
+  font-size: 15pt;
+}
+.right
+    {
+
+      float: left;
+      display: inline;
+      color: white !important;
+      text-decoration: none;
+    }
+  .left
+        {
+        float: left;
+        display: inline;
+        color: white !important;
+        text-decoration: none;
+        }
+li
+  {   list-style: none;
+
+  }
+
+.footer
+  {
+    background-color: #43609C;
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+.footer p
+{
+  background-color: #43609C;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+
+  /* Addendum */
+}

@@ -11,8 +11,19 @@
   </head>
 
   <body>
-
-
+    <header>
+    <ul>
+      <div class=top_menu clearfix>
+    <li class="right"><a href="#">Sign up</a></li>
+    <li class="right"><a href="#">Login</a></li>
+          </div>
+        </ul>
+</header>
+    <% flash.each do |key, value| %>
+ <%= content_tag(:div, value, class: "#{key}") %>
+ <% end %>
     <%= yield %>
+    <div class="footer">
+    <p>Let's connect</p>
   </body>
 </html>
