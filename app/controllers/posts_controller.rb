@@ -21,11 +21,12 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = current_user.posts.build(post_params)
+    @post = Post.new(post_params)
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: "post was successfully created." }
+        format.html { redirect_to post_path(@post), notice: "post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -56,7 +57,8 @@ class PostsController < ApplicationController
     end
   end
   def confirm
-        @post = current_user.posts.build(post_params)
+    @post = Post.new(post_params)
+    @post.user = current_user
       render :new if @post.invalid?
     end
   private

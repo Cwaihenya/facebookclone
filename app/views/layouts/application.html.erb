@@ -11,8 +11,22 @@
   </head>
 
   <body>
-
-
+    <% flash.each do |key, value| %>
+ <%= content_tag(:div, value, class: "#{key}") %>
+ <% end %>
+ <header>
+    <% if logged_in? %>
+   <%= link_to "Profile", user_path(current_user.id) %>
+   <%= link_to " New Post", new_post_path %>
+   <%= link_to "Logout", new_session_path(@session), method: :delete %>
+   <% else %>
+   <%= link_to "Sign up", new_user_path %>
+   <%= link_to "Login", new_session_path %>
+   <% end %>
+  </header>
     <%= yield %>
+    <div class="footer">
+    <p>Let's connect</p>
+    </div>
   </body>
 </html>

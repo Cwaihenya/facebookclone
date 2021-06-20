@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
-
+   skip_before_action :login_required, only: [:new, :create]
   # GET /users or /users.json
   def index
     @user = User.all
@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+
   def create
       @user = User.new(user_params)
       if @user.save
@@ -17,10 +18,11 @@ class UsersController < ApplicationController
         render :new
       end
     end
+
     def show
-      redirect_to user_path(@user.id)
-    
+        @user = User.find(params[:id])
       end
+
     private
     def set_user
     @user = User.find(params[:id])

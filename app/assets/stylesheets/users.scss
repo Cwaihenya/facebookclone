@@ -9,7 +9,7 @@ h1
 }
 header
 {
-  font-size: 30pt;
+  font-size: 20pt;
 width: 100%;
 background-color: #43609C;
 height: 50px;
@@ -20,6 +20,7 @@ text-decoration: none;
 box-shadow: none;
 border: 0;
 text-decoration: none;
+color: white !important;
   }
   .top_menu li a{
 color: #FFFFFF;
@@ -27,7 +28,7 @@ color: #FFFFFF;
 }
 .right
     {
-
+      text-align: right;
       float: left;
       display: inline;
       color: white !important;
@@ -35,14 +36,15 @@ color: #FFFFFF;
     }
   .left
         {
+        text-align: left;
         float: left;
         display: inline;
         color: white !important;
         text-decoration: none;
         }
 li
-  {   list-style: none;
-
+  {
+    list-style: none;
   }
 
 .footer
