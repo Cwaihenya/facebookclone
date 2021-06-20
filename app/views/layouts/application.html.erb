@@ -15,6 +15,7 @@
  <%= content_tag(:div, value, class: "#{key}") %>
  <% end %>
  <header>
+     <div class=top_menu clearfix>
     <% if logged_in? %>
    <%= link_to "Profile", user_path(current_user.id) %>
    <%= link_to " New Post", new_post_path %>
@@ -23,6 +24,7 @@
    <%= link_to "Sign up", new_user_path %>
    <%= link_to "Login", new_session_path %>
    <% end %>
+   </div>
   </header>
     <%= yield %>
     <div class="footer">
