@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2021_06_20_081759) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "extension"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.text "image"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
@@ -29,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_06_20_081759) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "image"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "posts", "users"
