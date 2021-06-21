@@ -1853,10 +1853,13 @@ coa@^2.0.2:
     chalk "^2.4.1"
     q "^1.1.2"
 
-coffee-loader@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/coffee-loader/-/coffee-loader-3.0.0.tgz#c81821c10e2e5625aa5c78e8d18c30704f2b8a7e"
-  integrity sha512-2UPQNXfMAt4RmI/K9VxnLyrXdYdHPHQuEFiGcb70pTsVPmrV9M6Xg3p9ub7t1ettZZqvXUujjHozp22uTfLkzg==
+coffee-loader@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/coffee-loader/-/coffee-loader-1.0.0.tgz#b8cedc8c81eb2a435af59e4b369ece439261fcb4"
+  integrity sha512-/fjJBA842cpoN2upABQFO45ALS0clTHM8WsAbvDrArn6y4TaZikKgSPyMZxwqAkkz6zTV7MgS4RuxU3wS4XUvw==
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^2.6.6"
 
 coffeescript@1.12.7:
   version "1.12.7"
@@ -5785,7 +5788,7 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.6.5, schema-utils@^2.7.0:
+schema-utils@^2.6.5, schema-utils@^2.6.6, schema-utils@^2.7.0:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.7.1.tgz#1ca4f32d1b24c590c203b8e7a50bf0ea4cd394d7"
   integrity sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==
