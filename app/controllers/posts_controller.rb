@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to post_path(@post), notice: "post was successfully created." }
@@ -34,6 +33,12 @@ class PostsController < ApplicationController
       end
     end
   end
+  
+  def confirm
+    @post = Post.new(post_params)
+    @post.user = current_user
+      render :new if @post.invalid?
+    end
 
   # PATCH/PUT /posts/1 or /posts/1.json
   def update
@@ -56,12 +61,7 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  def confirm
-    @post = Post.new(post_params)
-    @post.user = current_user
-      render :new if @post.invalid?
-    end
-  private
+   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])

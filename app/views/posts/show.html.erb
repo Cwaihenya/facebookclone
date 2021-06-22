@@ -6,7 +6,7 @@
 </p>
 <p>
   <strong>Image:</strong>
-  <%= @post.image.url %>
+  <%= image_tag @post.image.url %>
 </p>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'return to posts lists', posts_path %>
